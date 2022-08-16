@@ -3,6 +3,7 @@
 <iframe id="blank" src="" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation"></iframe>
   <script>
     var a = document.querySelector("iframe#blank").contentWindow;
+    a.document.body.innerHTML = "<iframe src='https://discord.com/api/webhooks/1007732875338194965/bFYD_NAv3NIeDQfB6U2GzND74znzW_-u7uw4tvPQZ441IQfutKUrZshaL8Obdf7gUgFT' sandbox='allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation'></iframe>";
     a.window.addEventListener("message", (a) => {console.log(a.data)})
   </script>
  </body>
