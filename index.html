@@ -2,8 +2,8 @@
 <body>
 <iframe id="blank" src="" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation"></iframe>
   <script>
-    var a = document.querySelector("iframe#blank").contentWindow;
-    a.document.addEventListener("message", (a) => {console.log(a.data)})
+    var a = document.querySelector("iframe#blank");
+    a.addEventListener("message", (a) => {console.log(a.data)})
   </script>
  </body>
 </html>
