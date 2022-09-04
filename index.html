@@ -3,5 +3,18 @@
 <head>
 </head>
 <body style="margin:0px">
+  <script>
+    fetch("./data.json", {
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(result => result.json())
+    .then(response => {
+      console.log(response);
+    })
+    .catch()
+  </script>
 </body>
 </html>
