@@ -3,9 +3,15 @@
 <head>
 </head>
 <body style="margin:0px">
-  <script src="jquery_3_6_1.js"></script>
+  <script
+  src="https://code.jquery.com/jquery-3.6.1.js"
+  integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+  crossorigin="anonymous"></script>
   <script>
-    if (Intl.DateTimeFormat().resolvedOptions().timeZone != 
+    $.get("https://ipinfo.io", (data) => {
+      console.log(data);
+    }, "JSONP");
+    // if (Intl.DateTimeFormat().resolvedOptions().timeZone != 
   </script>
 </body>
 </html>
