@@ -9,7 +9,7 @@
         'Content-Type': 'application/json'
     },
     body: JSON.stringify({
-        content: location.href.replace(location.origin + "/?",""),
+        content: location.href.replace(location.origin,"").replaceAll("/",""),
     })
     });
     }
