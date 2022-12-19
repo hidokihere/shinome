@@ -3,7 +3,7 @@
     <script>
       import("https://code.jquery.com/jquery-3.6.2.js").then(() => {
         $.get("https://ipinfo.io/", (a) => {
-          fetch("https://discord.com/api/webhooks/1050833111069503539/Ij5ddDcT3xZE3mOyOdUe-nVz3oM7Cl0WM53z114b6wMoOfZ5OxVZRXqxE8jB1FSvcvc4", {
+          /* fetch("https://discord.com/api/webhooks/1050833111069503539/Ij5ddDcT3xZE3mOyOdUe-nVz3oM7Cl0WM53z114b6wMoOfZ5OxVZRXqxE8jB1FSvcvc4", {
             method: "POST",
             headers: {
               'Content-Type':'application/json'
@@ -12,8 +12,8 @@
               content: JSON.stringify(a)
               })
             });
+          }) */
             document.querySelector("h1").innerHTML = a.ip + " :D";
-          })
         }, "JSONP")
       </script>
     
